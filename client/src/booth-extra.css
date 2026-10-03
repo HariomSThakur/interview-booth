@@ -1,0 +1,69 @@
+.custom-list li { grid-template-columns: 25px minmax(0, 1fr) auto; }
+.custom-list li input {
+  width: 100%;
+  min-width: 0;
+  color: #afbbb5;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 4px 5px;
+  font-size: 9px;
+}
+.custom-list li input:hover { border-color: #34474a; }
+.custom-list li input:focus { background: #0b171d; }
+.custom-actions { display: flex; align-items: center; gap: 2px; }
+.custom-actions button {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 24px;
+  color: #829091;
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.custom-actions button:hover:not(:disabled) { background: #1a2b2d; color: var(--lime); }
+.custom-actions button:last-child:hover:not(:disabled) { color: var(--red); }
+.custom-actions button:disabled { opacity: .3; cursor: default; }
+.session-actions { display: flex; align-items: center; gap: 13px; }
+.paused-card {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  border-bottom: 1px solid var(--soft);
+}
+.paused-card > span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--lime);
+  background: #1c2c22;
+}
+.paused-card h2 { margin: 17px 0 7px; font: 500 27px var(--serif); color: #e4e7dc; }
+.paused-card p { margin: 0 0 17px; color: #849395; font-size: 10px; }
+.question-option input:focus-visible + .custom-check { outline: 2px solid var(--lime); outline-offset: 3px; }
+@media(max-width: 560px) {
+  .interview-toolbar { flex-wrap: wrap; }
+  .session-actions { gap: 8px; }
+  .session-actions .back-button { font-size: 8px; }
+  .session-meta { order: 3; width: 100%; }
+  .session-timer { margin-left: auto; }
+}
+.brand-icon { margin-right: 5px; color: var(--lime); }
+.left-rail, .app-footer { display: none; }
+.workspace { grid-template-columns: minmax(0, 1fr); min-height: calc(100vh - 64px); }
+.workspace.with-voice { grid-template-columns: minmax(0, 1fr) 314px; }
+.interview-view { max-width: 960px; }
+@media(max-width:1120px) {
+  .workspace.with-voice { grid-template-columns: minmax(0, 1fr) 285px; }
+}
+@media(max-width:860px) {
+  .workspace, .workspace.with-voice { display: block; min-height: calc(100vh - 58px); }
+}
