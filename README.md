@@ -2,7 +2,7 @@
 
 Interview Booth is a local-first mock interviewer with spoken questions, configurable delivery, optional microphone transcription, public interview-question search, and optional Ollama feedback.
 
-## What you can do
+## What you can dO
 
 - Practice behavioral, technical, recruiter, case-study, and system-design interviews.
 - Choose public reports, local Ollama, or a mix. Public-only sessions work without Ollama and never send answers to a model.
